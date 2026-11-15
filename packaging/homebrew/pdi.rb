@@ -1,7 +1,7 @@
 class Pdi < Formula
   desc "Product Design Intelligence (PDI) — Principal Product Designer skills for AI agents"
-  homepage "https://github.com/otherthngz/pdi"
-  url "https://github.com/otherthngz/pdi/archive/refs/tags/v1.0.0.tar.gz"
+  homepage "https://github.com/otherthngz/product-design-intelligence"
+  url "https://github.com/otherthngz/product-design-intelligence/archive/refs/tags/v1.0.0.tar.gz"
   version "1.0.0"
   license "MIT"
 

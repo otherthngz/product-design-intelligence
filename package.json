@@ -6,7 +6,7 @@
   "author": "otherthngz (https://github.com/otherthngz)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/otherthngz/pdi.git"
+    "url": "https://github.com/otherthngz/product-design-intelligence.git"
   },
   "bin": {
     "pdi": "./bin/pdi.js",
