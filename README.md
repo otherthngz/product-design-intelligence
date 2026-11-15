@@ -1,99 +1,80 @@
 # Product Design Intelligence (PDI)
 
-**Status: Supervised Public Beta (`v1.0.0`).** PDI is a collection of skills, guidance, and examples that help AI coding agents work through product design problems. It encourages an agent to understand the user and the task, examine evidence and assumptions, and choose an appropriate solution before designing an interface.
+**Supervised Public Beta (`v1.0.0`)**
 
-PDI is guidance for an AI assistant, not an AI model, automated design-assurance tool, or replacement for human design review. Output quality depends on the context you provide, your host agent's capabilities, and human judgment before shipping.
+PDI adds nine product design skills and curated UX/UI references to your AI coding assistant. Instead of jumping straight into generic UI code, your assistant is guided to understand the user's task, separate facts from assumptions, avoid bloated "AI slop" patterns, and make scoped, maintainable interface decisions.
 
-## What's included
+> PDI is guidance for your AI assistant, not a replacement for human design review or accessibility testing.
 
-- Nine [design skills](.agents/skills/) covering research, product framing, interaction design, UX writing, design systems, prototyping, visual design, audits, and handoff.
-- A [knowledge library](knowledge/index.md) with 11 practical design and frontend references.
-- A [task router](workflows/route-task.md) and [output contract](workflows/output-contract.md) that help an agent choose skills and structure evidence-linked critique.
-- [Examples](examples/) and scripts for installing (`scripts/install_pdi.py`, `bin/pdi.js`), auditing (`scripts/audit_artifact.py`), and validating the package.
+---
 
-The repository also contains a separate documentation website in `website/`. It is not part of the skill installation or npm package.
+## Install the skills
 
-## Quickstart
-
-### 1. Install into a project
-
-Using Python 3 from this repository (or `npx pdi-skills@beta`, pending npm publication):
+### From GitHub (available now, requires Python 3)
 
 ```bash
-python3 scripts/install_pdi.py /path/to/your-project --hosts agents --mode solo --standalone-skills
-# once published to npm beta:
+git clone https://github.com/otherthngz/product-design-intelligence.git
+python3 product-design-intelligence/scripts/install_pdi.py /path/to/your-project --hosts agents --mode solo --standalone-skills
+```
+
+### Via npm *(pending npm beta publication)*
+
+```bash
 npx pdi-skills@beta /path/to/your-project --hosts agents --mode solo --standalone-skills
 ```
 
-- **Hosts (`--hosts`):** `agents` (`AGENTS.md` + `.agents/skills/`, compatible with Codex and AGENTS.md-aware tools), `claude`, `cursor`, `windsurf`, `copilot`, or `all`. Packaging and clean installation are verified for all 5 hosts; live behavioral evaluation has only been run on Codex CLI (`0.167.0`).
+### Choose your AI assistant (`--hosts`)
+
+| Assistant | `--hosts` value | Files added to your project |
+| --- | --- | --- |
+| Codex / `AGENTS.md`-compatible agents | `agents` | `AGENTS.md` and `.agents/skills/` |
+| Claude Code | `claude` | `CLAUDE.md` and `.claude/skills/` |
+| Cursor | `cursor` | `.cursor/rules/pdi-*.mdc` |
+| Windsurf | `windsurf` | `.windsurfrules` |
+| GitHub Copilot | `copilot` | `.github/copilot-instructions.md` |
+| All of the above | `all` | All host files above |
+
 - **Modes (`--mode`):** `solo` (default), `team`, or `enterprise`.
-- **Overwrite safety:** The installer skips existing files by default. Use `--append` to append to supported existing host files, or `--force` only after reviewing what may be overwritten.
+- **Safe by default:** Existing files are skipped unless you pass `--append` (add to existing instructions) or `--force` (overwrite).
 
-### 2. Verify installation and run static checks
+---
 
-```bash
-npm run pdi:validate
-npm run pdi:test
-python3 scripts/audit_artifact.py /path/to/artifact.html
-```
+## Use PDI in your project
 
-### 3. Run a representative design task
+Once installed, ask your assistant to work on a real screen, flow, or spec in your project:
 
-Ask your assistant for a concrete task and link the relevant artifact:
+> Review `src/components/SettingsForm.tsx` for usability and accessibility issues. Cite what you observe in the code, separate assumptions from facts, and suggest the smallest fix.
 
-> Review `examples/analytics-dashboard/index.html` using the repository's UX audit workflow. Cite observed evidence, distinguish assumptions from facts, and recommend the smallest effective fix.
+> Design and build a 2-step onboarding flow using our existing UI components. Include empty, validation-error, loading, and success states.
 
-If your assistant does not auto-discover project skills, ask it to read `AGENTS.md`, `workflows/route-task.md`, and the relevant `.agents/skills/<name>/SKILL.md`. See [Using PDI](docs/getting-started/using-pdi.md) for more examples and troubleshooting.
+If your assistant does not automatically pick up the skills, tell it to read `AGENTS.md` (or your host's instruction file) and the relevant `.agents/skills/<skill-name>/SKILL.md`.
 
-## Known limitations (Public Beta)
+---
 
-- **Design judgment:** PDI provides decision support, not guaranteed Staff/Principal-level design correctness; human review is required for consequential design recommendations.
-- **Unresolved P0.2 severity gate:** Controlled severity-calibration scenarios A–C in [`tests/evaluation-cases.md`](tests/evaluation-cases.md) remain blocked by external Codex CLI quota exhaustion; severity classifications are heuristic, context-dependent, and require human review.
-- **No automated accessibility or browser guarantee:** `scripts/audit_artifact.py` and browser checks do not establish complete WCAG conformance, contrast, or screen-reader compatibility.
-- **Agent compatibility:** Packaging and installation were tested across all 5 supported hosts, but live behavioral evaluation has only been run on Codex CLI (`0.167.0`); equivalent reliability across other hosts is unverified.
-- **No real-user validation:** Product design recommendations have not been validated through real-user usability studies.
+## Included skills
 
-See [Limitations and next steps](docs/reference/limitations.md) for full details.
+- **`product-framing`** — Frame user problems, goals, constraints, and success criteria before designing.
+- **`ux-research`** — Plan discovery and synthesize supplied research notes without inventing evidence.
+- **`interaction-design`** — Define user flows, navigation, state logic, and error recovery.
+- **`ux-writing`** — Write clear interface copy, labels, empty states, and recovery messages.
+- **`design-system`** — Reuse and standardize tokens, UI kits (`shadcn/ui`, `Nuxt UI`, Material 3, Apple HIG), and component APIs.
+- **`ui-prototyping`** — Build or refine scoped, multi-state UI implementations using your existing UI kit.
+- **`frontend-design`** — Establish intentional visual direction, typography, and hierarchy for custom UI.
+- **`ux-audit`** — Critique existing interfaces with evidence-linked severity (`Critical`, `Major`, `Minor`, `Opportunity`).
+- **`design-handoff`** — Produce clear engineering handoffs and decision changelogs.
 
-## Preview the website
+---
 
-From the root of this repository, install the website dependencies and start the development server:
+## Beta limitations to keep in mind
 
-```bash
-cd website
-pnpm install
-pnpm dev
-```
+- **Human review required:** PDI provides decision support, not guaranteed Staff/Principal-level design correctness.
+- **Severity calibration (`P0.2`):** Controlled severity-calibration scenarios A–C remain unexecuted; severity labels are heuristic and should be reviewed by a human.
+- **Accessibility:** PDI checks do not guarantee WCAG 2.2 conformance or screen-reader compatibility—verify with real assistive technology.
+- **Host compatibility & user testing:** Installation is verified across all 5 hosts above, while live behavioral testing has only been run on Codex CLI (`0.167.0`), and no real-user usability study has been conducted.
 
-Open [http://localhost:3000](http://localhost:3000). The terminal will show the address if another port is used. Press `Ctrl+C` to stop the server. The site uses Next.js and requires Node.js and pnpm; Python 3 is needed for the PDI scripts, not for browsing the site.
+---
 
-For a production deployment outside Vercel, set `SITE_URL` to the public website URL so metadata and sharing links use the correct address.
+## More information
 
-The website's documentation lives in `website/content/docs/`. This README is the repository's landing page on GitHub and is edited separately in `README.md`.
-
-## Repository structure and publishing
-
-- `.agents/skills/`, `knowledge/`, `workflows/`, `adapters/`, and `templates/` are the PDI material used by agents.
-- `scripts/` and `bin/` contain the installer and supporting tools. `docs/` and `examples/` provide reference material.
-- `website/` is a private Next.js project for browsing documentation. It can be deployed separately and is excluded from the npm package.
-- `tests/`, `.github/`, and `packaging/` support development and distribution. Local dependencies, build output, environment files, and editor settings are not part of the published npm package.
-
-The root `package.json` lists the files included when packaging PDI for npm. Run `npm pack --dry-run --ignore-scripts` to inspect the package before publishing. No package or website is published automatically.
-
-## Checks
-
-To validate the skills and knowledge, then run the PDI tests:
-
-```bash
-python3 scripts/validate_skills.py
-python3 scripts/validate_knowledge.py
-python3 -m unittest discover -s tests -v
-```
-
-With the website development server running, `pnpm --dir website test:smoke` checks the main pages, installation guide, and agent discovery endpoints.
-
-The [documentation index](docs/README.md) has more details on the architecture, examples, and limitations.
-
-## Contributing and license
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution policy and [SECURITY.md](SECURITY.md) for security reporting. PDI is available under the [MIT License](LICENSE).
+- [Using PDI](docs/getting-started/using-pdi.md) · [Limitations](docs/reference/limitations.md) · [Changelog](CHANGELOG.md)
+- [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md) · [MIT License](LICENSE)

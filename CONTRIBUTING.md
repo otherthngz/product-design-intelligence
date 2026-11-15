@@ -5,14 +5,13 @@ License: **[MIT License](LICENSE)**
 
 ---
 
-## ⚠️ Mandatory Pre-Approval & Assignment Policy (Wajib Izin Terlebih Dahulu)
+## ⚠️ Mandatory Pre-Approval & Assignment Policy
 
 PDI is released under the **[MIT License](LICENSE)**—anyone is free to **use, install, fork, and adapt** these skills in their own projects.
 
 However, to protect the quality, security, and architectural coherence of this upstream repository, **all contributions to this repository require prior permission or explicit issue assignment from `@otherthngz` before opening a Pull Request**:
 
-1. **🇮🇩 Bahasa Indonesia:** Jangan langsung mengirim Pull Request (PR) tanpa izin. Buka Issue terlebih dahulu menggunakan template [Skill or Knowledge Proposal](.github/ISSUE_TEMPLATE/skill-or-knowledge-proposal.md), jelaskan alasan dan sumber buktinya, lalu tunggu sampai **@otherthngz** menyetujui dan melakukan **assign** Issue tersebut ke akun Anda (atau jika Anda memang sudah di-assign langsung oleh `@otherthngz`).
-2. **🌐 English:** Do not submit unsolicited Pull Requests. Open an issue first using the [Skill or Knowledge Proposal template](.github/ISSUE_TEMPLATE/skill-or-knowledge-proposal.md) and wait until **@otherthngz** approves and explicitly **assigns** the issue to you. Unassigned PRs will be closed.
+Do not submit unsolicited Pull Requests. Open an issue first using the [Skill or Knowledge Proposal template](.github/ISSUE_TEMPLATE/skill-or-knowledge-proposal.md) and wait until **@otherthngz** approves and explicitly **assigns** the issue to you. Unassigned PRs will be closed.
 
 ---
 
