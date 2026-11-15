@@ -17,7 +17,7 @@ git clone https://github.com/otherthngz/product-design-intelligence.git
 python3 product-design-intelligence/scripts/install_pdi.py /path/to/your-project --hosts agents --mode solo --standalone-skills
 ```
 
-### Via npm *(pending npm beta publication)*
+### Via npm
 
 ```bash
 npx pdi-skills@beta /path/to/your-project --hosts agents --mode solo --standalone-skills
