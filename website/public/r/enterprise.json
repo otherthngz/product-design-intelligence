@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "enterprise",
+  "title": "PDI Enterprise Mode",
+  "description": "Role-scoped multi-squad governance, 3-tier tokens, and strict PII auditing.",
+  "files": [
+    {
+      "path": "registry/new-york/your-component.tsx",
+      "content": "import type { HTMLAttributes } from \"react\";\nimport { forwardRef } from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nexport type YourComponentProps = HTMLAttributes<HTMLDivElement>;\n\nconst YourComponent = forwardRef<HTMLDivElement, YourComponentProps>(\n  ({ className, ...props }, ref) => (\n    <div\n      ref={ref}\n      className={cn(\n        \"p-5 rounded-md text-left bg-muted/20 space-y-2.5 border border-muted flex flex-col justify-center\",\n        className\n      )}\n      {...props}\n    >\n      <p className=\"text-sm font-medium text-foreground\">\n        9 Specialist Agent Skills · 11 Curated Knowledge Topics · 13 Design Quality Gates\n      </p>\n      <p className=\"text-muted-foreground text-xs leading-relaxed\">\n        Works across{\" \"}\n        <code className=\"bg-muted rounded px-1.5 py-0.5 text-xs\">\n          Antigravity\n        </code>{\" \"}\n        <code className=\"bg-muted rounded px-1.5 py-0.5 text-xs\">\n          Claude Code\n        </code>{\" \"}\n        <code className=\"bg-muted rounded px-1.5 py-0.5 text-xs\">\n          Cursor\n        </code>{\" \"}\n        <code className=\"bg-muted rounded px-1.5 py-0.5 text-xs\">\n          Windsurf\n        </code>{\" \"}\n        <code className=\"bg-muted rounded px-1.5 py-0.5 text-xs\">\n          Copilot\n        </code>\n      </p>\n    </div>\n  )\n);\n\nYourComponent.displayName = \"YourComponent\";\n\nexport { YourComponent };\n",
+      "type": "registry:ui",
+      "target": "components/ui/pdi-card.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

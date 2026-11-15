@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "afterFileEdit": [
+      {
+        "command": "pnpm --dir website fix"
+      }
+    ]
+  },
+  "version": 1
+}

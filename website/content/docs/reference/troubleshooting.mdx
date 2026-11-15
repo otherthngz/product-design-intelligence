@@ -1,0 +1,20 @@
+---
+title: Troubleshooting
+description: Common setup issues and what to try next.
+---
+
+## My assistant cannot find a skill
+
+Ask it to read the project's instructions and the relevant `.agents/skills/<name>/SKILL.md` file directly. For Claude Code, also check `.claude/skills/`. Reload the assistant if its project instructions are loaded at startup.
+
+## A file or folder was skipped
+
+The installer leaves existing content in place unless `--force` is used. Review the output and compare your existing files before deciding how to update them. `--append` adds instructions only to supported host instruction files; it does not merge existing skills.
+
+## Python or a path was not found
+
+Confirm Python 3 is installed, check the path to your local PDI copy, and run the command from your target project. Keep quotes around paths containing spaces.
+
+## The result is not what I expected
+
+Add the relevant project files, users, constraints, and desired output to your request. Ask the assistant what it checked and which statements are assumptions. See [your first task](/docs/first-task).

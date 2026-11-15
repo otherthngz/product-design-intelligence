@@ -1,0 +1,147 @@
+{
+  "sources": [
+    {
+      "id": "roadmap-design-system",
+      "name": "Design System Roadmap",
+      "url": "https://roadmap.sh/design-system",
+      "domain": "design-systems",
+      "type": "community learning resource",
+      "usage": "Link and attribute; check source terms before reproduction. No source content or charts redistributed.",
+      "verified": "2026-11-14",
+      "status": "reviewed to stated scope; recheck when used for a consequential update",
+      "review_scope": "Landing page title and description only; interactive chart not accessible in text."
+    },
+    {
+      "id": "roadmap-product",
+      "name": "Product Design Roadmap",
+      "url": "https://roadmap.sh/product-design",
+      "domain": "product-design",
+      "type": "community learning resource",
+      "usage": "Link and attribute; check source terms before reproduction. No source content or charts redistributed.",
+      "verified": "2026-11-14",
+      "status": "reviewed to stated scope; recheck when used for a consequential update",
+      "review_scope": "Landing page title and description only; interactive chart not accessible in text."
+    },
+    {
+      "id": "roadmap-ux",
+      "name": "UX Design Roadmap",
+      "url": "https://roadmap.sh/ux-design",
+      "domain": "ux-design",
+      "type": "community learning resource",
+      "usage": "Link and attribute; check source terms before reproduction. No source content or charts redistributed.",
+      "verified": "2026-11-14",
+      "status": "reviewed to stated scope; recheck when used for a consequential update",
+      "review_scope": "Landing page title and description only; interactive chart not accessible in text."
+    },
+    {
+      "id": "roadmap-ai",
+      "name": "AI Product Builder Roadmap",
+      "url": "https://roadmap.sh/ai-product-builder",
+      "domain": "ai-product-building",
+      "type": "community learning resource",
+      "usage": "Link and attribute; check source terms before reproduction. No source content or charts redistributed.",
+      "verified": "2026-11-14",
+      "status": "reviewed to stated scope; recheck when used for a consequential update",
+      "review_scope": "Landing page title and description only; interactive chart not accessible in text."
+    },
+    {
+      "id": "roadmap-frontend",
+      "name": "Frontend Developer Roadmap",
+      "url": "https://roadmap.sh/frontend",
+      "domain": "frontend-engineering",
+      "type": "community learning resource",
+      "usage": "Link and attribute; check source terms before reproduction. No source content or charts redistributed.",
+      "verified": "2026-11-14",
+      "status": "reviewed to stated scope; recheck when used for a consequential update",
+      "review_scope": "Read accessible introductory text on technologies, accessibility, responsive design and testing; interactive chart not reviewed."
+    },
+    {
+      "id": "govuk-needs",
+      "name": "GOV.UK Learning about users and their needs",
+      "url": "https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs",
+      "domain": "product-design",
+      "type": "recognized professional reference",
+      "usage": "Link and attribute; check source terms before reproduction. No source content or charts redistributed.",
+      "verified": "2026-11-14",
+      "status": "reviewed to stated scope; recheck when used for a consequential update",
+      "review_scope": "User needs and research guidance reviewed."
+    },
+    {
+      "id": "w3c-structure",
+      "name": "W3C WAI Page Structure Tutorial",
+      "url": "https://www.w3.org/WAI/tutorials/page-structure/",
+      "domain": "ux-design, frontend-engineering",
+      "type": "recognized professional reference",
+      "usage": "Link and attribute; check source terms before reproduction. No source content or charts redistributed.",
+      "verified": "2026-11-14",
+      "status": "reviewed to stated scope; recheck when used for a consequential update",
+      "review_scope": "Page regions, headings and meaningful content structure reviewed."
+    },
+    {
+      "id": "wcag22",
+      "name": "W3C WCAG 2.2 Quick Reference",
+      "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+      "domain": "ux-design, frontend-engineering",
+      "type": "official specification reference",
+      "usage": "Link and attribute; check source terms before reproduction. No source content or charts redistributed.",
+      "verified": "2026-11-14",
+      "status": "reviewed to stated scope; recheck when used for a consequential update",
+      "review_scope": "Quick reference and success-criterion index reviewed; no compliance assessment performed."
+    },
+    {
+      "id": "uswds-tokens",
+      "name": "USWDS Design tokens",
+      "url": "https://designsystem.digital.gov/design-tokens/",
+      "domain": "design-systems",
+      "type": "recognized professional reference",
+      "usage": "Link and attribute; check source terms before reproduction. No source content or charts redistributed.",
+      "verified": "2026-11-14",
+      "status": "reviewed to stated scope; recheck when used for a consequential update",
+      "review_scope": "Token documentation reviewed."
+    },
+    {
+      "id": "nist-ai-rmf",
+      "name": "NIST AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "domain": "ai-product-building",
+      "type": "recognized professional reference",
+      "usage": "Link and attribute; check source terms before reproduction. No source content or charts redistributed.",
+      "verified": "2026-11-14",
+      "status": "reviewed to stated scope; recheck when used for a consequential update",
+      "review_scope": "Framework overview reviewed; not a compliance assessment."
+    },
+    {
+      "id": "pdi-guidance",
+      "name": "PDI design practice",
+      "url": "../knowledge/design-practice.md",
+      "domain": "all",
+      "type": "internal PDI guidance",
+      "usage": "Project guidance; preserve history and review changes.",
+      "verified": "2026-11-14",
+      "status": "maintained in repository",
+      "review_scope": "Existing local guidance inspected."
+    },
+    {
+      "id": "antislop",
+      "name": "Antislop rules for AI coding agents",
+      "url": "https://antislop.ai.id/",
+      "domain": "design-systems, frontend-engineering",
+      "type": "community learning resource",
+      "usage": "Link and attribute; original PDI guidance paraphrases ideas and does not redistribute source content.",
+      "verified": "2026-11-14",
+      "status": "reviewed to stated scope; recheck when used for a consequential update",
+      "review_scope": "Reviewed landing page descriptions of design direction, UI, copy, accessibility and mobile guidance; not the complete rule set or installer."
+    },
+    {
+      "id": "taste-skill",
+      "name": "Taste Skill",
+      "url": "https://www.tasteskill.dev/",
+      "domain": "design-systems, frontend-engineering",
+      "type": "community learning resource",
+      "usage": "Link and attribute; original PDI guidance paraphrases ideas and does not redistribute source content.",
+      "verified": "2026-11-14",
+      "status": "reviewed to stated scope; recheck when used for a consequential update",
+      "review_scope": "Reviewed website overview of design directions, app layouts and browser inspection, plus accessible skill listing; no installation or benchmark."
+    }
+  ]
+}

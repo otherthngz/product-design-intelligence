@@ -1,0 +1,34 @@
+---
+title: Installer options
+description: CLI flags for the PDI installer—what each option does and when to use it.
+---
+
+Installer options are **terminal (CLI) flags** you pass when running `pdi-skills` to copy PDI files into your project. They control **which files** are installed and **how existing files are handled**—they are not chat commands.
+
+> Looking to change how the AI assistant behaves in chat (e.g. `solo`, `team`, `enterprise`)? See [Working modes](/docs/guides/modes).
+
+## All installer flags
+
+| Option | Default | What it does | Example |
+| --- | --- | --- | --- |
+| `--hosts` | `all` | Selects which AI assistant configs to create (`agents`, `claude`, `cursor`, `windsurf`, `copilot`, or `all`). | `npx pdi-skills --hosts claude,cursor` |
+| `--mode` | `solo` | Sets the default working mode (`solo`, `team`, or `enterprise`) in the generated instructions. | `npx pdi-skills --mode team` |
+| `--standalone-skills` | `false` | Bundles supporting references inside `.agents/` so skills are self-contained. | `npx pdi-skills --standalone-skills` |
+| `--append` | `false` | Appends PDI instructions to existing host instruction files instead of skipping them. | `npx pdi-skills --append` |
+| `--force` | `false` | Overwrites matching skills, support folders, and instruction files. | `npx pdi-skills --force` |
+| `--check` | `false` | Compares the recorded source hash in `.agents/pdi-lock.json` with the current source. | `npx pdi-skills --check` |
+
+## Common combinations
+
+- **First-time setup for Cursor + Claude:**
+  ```bash
+  npx pdi-skills --hosts cursor,claude --mode team
+  ```
+- **Update an existing project without losing custom rules:**
+  ```bash
+  npx pdi-skills --append
+  ```
+- **Cleanly reset PDI files to the latest version:**
+  ```bash
+  npx pdi-skills --force
+  ```

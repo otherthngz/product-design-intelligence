@@ -1,0 +1,38 @@
+name: PDI Validation & Governance Checks
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate Agent Skills
+        run: python3 scripts/validate_skills.py
+
+      - name: Validate Knowledge Catalog & Topics
+        run: python3 scripts/validate_knowledge.py
+
+      - name: Verify Manifest & LLM Bundles Are Up To Date
+        run: |
+          python3 scripts/build_manifest.py
+          git diff --exit-code pdi-manifest.json llms.txt llms-full.txt
+
+      - name: Run Deterministic Artifact Audit (A11y, Copy, PII)
+        run: |
+          python3 scripts/audit_artifact.py examples/onboarding/index.html --strict-pii
+          python3 scripts/audit_artifact.py examples/analytics-dashboard/index.html --strict-pii
+
+      - name: Run Unit & Installer Tests
+        run: python3 -m unittest discover -s tests -v

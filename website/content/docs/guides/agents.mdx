@@ -1,0 +1,18 @@
+---
+title: Agent setup
+description: Understand how PDI configures different AI assistants.
+---
+
+PDI's installer can create project instructions for several agent hosts. It always places the shared skills in `.agents/skills/`; some hosts also receive their own instruction or skill files.
+
+| Host value | Files created when they do not already exist |
+| --- | --- |
+| `agents` | `AGENTS.md` and `.agents/skills/` |
+| `claude` | `CLAUDE.md` and `.claude/skills/` |
+| `cursor` | `.cursor/rules/pdi-*.mdc` |
+| `windsurf` | `.windsurfrules` |
+| `copilot` | `.github/copilot-instructions.md` |
+
+The installer can create these files, but automatic discovery and behavior have not been verified across every host. Follow your assistant's documentation for project instructions, and reload it if necessary.
+
+See [Install PDI](/docs/installation) for the command and [troubleshooting](/docs/reference/troubleshooting) if a skill is not found.

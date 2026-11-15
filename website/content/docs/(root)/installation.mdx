@@ -1,0 +1,55 @@
+---
+title: Install PDI
+description: One command installs all PDI skills, working modes, and assistant instructions into your project.
+---
+
+Installing PDI once gives your project **everything**: all 9 skills, all working modes (`solo`, `team`, `enterprise`), and instructions for your AI assistant. It does not install the AI assistant itself, and it adds zero runtime dependencies to your app.
+
+## 1. Run the installer
+
+Open your terminal in your project folder and run one of these commands:
+
+<CodeBlockCommand
+  __brew__="brew install otherthngz/tap/pdi"
+  __bun__="bunx pdi-skills"
+  __npm__="npx pdi-skills"
+  __pnpm__="pnpm dlx pdi-skills"
+  __yarn__="yarn dlx pdi-skills"
+/>
+
+If you install via `brew`, run `pdi` inside your project folder afterward.
+
+## 2. What gets created (Agent setup)
+
+PDI always places the shared skills in `.agents/skills/` and creates host-specific instruction files for the assistants you use:
+
+| Assistant | Host value | Files created |
+| --- | --- | --- |
+| Codex, Antigravity, or any `AGENTS.md` agent | `agents` | `AGENTS.md` and `.agents/skills/` |
+| Claude Code | `claude` | `CLAUDE.md` and `.claude/skills/` |
+| Cursor | `cursor` | `.cursor/rules/pdi-*.mdc` |
+| Windsurf | `windsurf` | `.windsurfrules` |
+| GitHub Copilot | `copilot` | `.github/copilot-instructions.md` |
+
+## 3. Optional CLI flags
+
+You can customize how the installer runs with these terminal flags:
+
+| Option | Default | What it does | Example |
+| --- | --- | --- | --- |
+| `--hosts` | `all` | Selects which AI assistant configs to create (comma-separated). | `npx pdi-skills --hosts claude,cursor` |
+| `--mode` | `all` | Optionally sets a preferred starting mode (`solo`, `team`, `enterprise`). | `npx pdi-skills --mode team` |
+| `--standalone-skills` | `false` | Bundles supporting references inside `.agents/`. | `npx pdi-skills --standalone-skills` |
+| `--append` | `false` | Appends PDI instructions to existing host files instead of skipping them. | `npx pdi-skills --append` |
+| `--force` | `false` | Overwrites matching skills, support folders, and instruction files. | `npx pdi-skills --force` |
+| `--check` | `false` | Compares the recorded source hash in `.agents/pdi-lock.json` with the source. | `npx pdi-skills --check` |
+
+## 4. Check your setup
+
+Ask your assistant:
+
+> "Check your project instructions and list the available PDI skills."
+
+If it cannot find them, point it to `.agents/skills/` (or your host-specific folder) and reload your editor.
+
+Continue to [Your first task](/docs/first-task).

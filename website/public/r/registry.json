@@ -1,0 +1,45 @@
+{
+  "name": "pdi",
+  "homepage": "https://github.com/otherthngz/pdi",
+  "items": [
+    {
+      "name": "solo",
+      "type": "registry:ui",
+      "title": "PDI Solo Mode",
+      "description": "Full 8-stage Product Designer rigor with lean documentation for solo founders and builders.",
+      "files": [
+        {
+          "path": "registry/new-york/your-component.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/pdi-card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "team",
+      "type": "registry:ui",
+      "title": "PDI Small Team Mode",
+      "description": "Collaborative PM, Design, and Engineering alignment with shared UI kit & copy glossaries.",
+      "files": [
+        {
+          "path": "registry/new-york/your-component.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/pdi-card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "enterprise",
+      "type": "registry:ui",
+      "title": "PDI Enterprise Mode",
+      "description": "Role-scoped multi-squad governance, 3-tier tokens, and strict PII auditing.",
+      "files": [
+        {
+          "path": "registry/new-york/your-component.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/pdi-card.tsx"
+        }
+      ]
+    }
+  ]
+}

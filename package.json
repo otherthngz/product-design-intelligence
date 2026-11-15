@@ -1,0 +1,38 @@
+{
+  "name": "pdi-skills",
+  "version": "1.0.0",
+  "description": "Product Design Intelligence (PDI) \u2014 Principal Product Designer skills, knowledge base, and multi-host installer for AI coding agents.",
+  "license": "MIT",
+  "author": "otherthngz (https://github.com/otherthngz)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/otherthngz/pdi.git"
+  },
+  "bin": {
+    "pdi": "./bin/pdi.js",
+    "pdi-skills": "./bin/pdi.js"
+  },
+  "files": [
+    ".agents/skills",
+    "AGENTS.md",
+    "adapters",
+    "bin",
+    "docs",
+    "examples",
+    "knowledge",
+    "scripts",
+    "templates",
+    "tests/evaluation-cases.md",
+    "workflows",
+    "llms.txt",
+    "llms-full.txt",
+    "pdi-manifest.json",
+    "CONTRIBUTING.md",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "pdi:validate": "python3 scripts/validate_skills.py && python3 scripts/validate_knowledge.py",
+    "pdi:manifest": "python3 scripts/build_manifest.py",
+    "pdi:test": "python3 -m unittest discover -s tests -v && node tests/test_prototypes.js"
+  }
+}

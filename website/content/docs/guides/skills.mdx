@@ -1,0 +1,59 @@
+---
+title: Skills
+description: "Detailed guide to all 9 PDI skills: when to use each one and how to invoke them."
+---
+
+PDI includes **9 specialized skills** stored in `.agents/skills/`. Your AI assistant automatically selects the right skill based on your request, or you can name a skill directly in your prompt.
+
+## Discovery & Strategy
+
+### `product-framing`
+- **Use it to:** Frame ambiguous product requests into clear user problems, goals, constraints, assumptions, and success criteria before designing solutions.
+- **Best for:** Product Managers, Founders, Designers starting a new feature.
+- **Example prompt:** *"Use `product-framing` to scope a team-invitation flow for our B2B dashboard."*
+
+### `ux-research`
+- **Use it to:** Plan user research, usability tests, and interview guides, or synthesize supplied research notes/transcripts into tagged evidence.
+- **Best for:** Product Managers, Researchers, Founders validating assumptions.
+- **Example prompt:** *"Use `ux-research` to synthesize these 5 customer interview notes into key pain points."*
+
+## Architecture & Content
+
+### `interaction-design`
+- **Use it to:** Define information architecture (IA), user journeys, flows, state logic matrices (loading, empty, error, success), transitions, and error recovery.
+- **Best for:** Designers and Engineers building multi-step flows or forms.
+- **Example prompt:** *"Use `interaction-design` to map the state matrix and error recovery for our payment retry flow."*
+
+### `ux-writing`
+- **Use it to:** Write and audit interface copy, microcopy, empty states, onboarding prompts, action labels, and error recovery messages.
+- **Best for:** Anyone improving clarity, tone, and actionable error messages.
+- **Example prompt:** *"Use `ux-writing` to rewrite these 403/500 error messages so users know what to do next."*
+
+## Visual & Implementation
+
+### `design-system`
+- **Use it to:** Define and audit design tokens, adapt an existing UI kit (`shadcn/ui`, Nuxt UI, Material 3, Apple HIG), and enforce component contracts without inventing bespoke components.
+- **Best for:** Engineers and Design Systems teams.
+- **Example prompt:** *"Use `design-system` to check if we can build this filter bar using our existing shadcn/ui primitives."*
+
+### `frontend-design`
+- **Use it to:** Explore distinctive, intentional visual direction, typography, and layout hierarchy when building new UI or reshaping an existing one.
+- **Best for:** Engineers and Designers avoiding generic, templated AI aesthetics.
+- **Example prompt:** *"Use `frontend-design` to refine the typography and visual hierarchy of our landing hero."*
+
+### `ui-prototyping`
+- **Use it to:** Build or modify an executable interface prototype using the project's active UI kit and validated design foundations.
+- **Best for:** Engineers and Designers shipping working screens quickly.
+- **Example prompt:** *"Use `ui-prototyping` to build an interactive prototype of the billing settings page."*
+
+## Evaluation & Handoff
+
+### `ux-audit`
+- **Use it to:** Evaluate an existing interface for usability, hierarchy, interaction, consistency, and accessibility (WCAG 2.2) issues, prioritized by severity.
+- **Best for:** Product Managers, Engineers, and Designers reviewing live screens or PRs.
+- **Example prompt:** *"Run a `ux-audit` on our signup page and list Critical and Major issues first."*
+
+### `design-handoff`
+- **Use it to:** Create a multi-audience implementation handoff and product decision changelog from a design or prototype, readable by AI agents, engineers, designers, and stakeholders.
+- **Best for:** Cross-functional teams moving from prototype to production.
+- **Example prompt:** *"Use `design-handoff` to document the decisions and edge cases for the new navigation."*

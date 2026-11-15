@@ -1,0 +1,172 @@
+{
+  "domains": [
+    "product-design",
+    "ux-design",
+    "design-systems",
+    "ai-product-building",
+    "frontend-engineering"
+  ],
+  "depths": [
+    "foundation",
+    "practitioner",
+    "advanced"
+  ],
+  "topics": [
+    {
+      "id": "product-outcomes",
+      "domain": "product-design",
+      "path": "product-design/outcomes.md",
+      "depths": [
+        "foundation",
+        "practitioner",
+        "advanced"
+      ],
+      "sources": [
+        "govuk-needs"
+      ]
+    },
+    {
+      "id": "task-hierarchy",
+      "domain": "ux-design",
+      "path": "ux-design/task-hierarchy.md",
+      "depths": [
+        "foundation",
+        "practitioner",
+        "advanced"
+      ],
+      "sources": [
+        "w3c-structure",
+        "wcag22"
+      ]
+    },
+    {
+      "id": "cognitive-human-factors",
+      "domain": "ux-design",
+      "path": "ux-design/cognitive-human-factors.md",
+      "depths": [
+        "foundation",
+        "practitioner",
+        "advanced"
+      ],
+      "sources": [
+        "w3c-structure",
+        "wcag22",
+        "pdi-guidance"
+      ]
+    },
+    {
+      "id": "research-synthesis",
+      "domain": "ux-design",
+      "path": "ux-design/research-synthesis.md",
+      "depths": [
+        "foundation",
+        "practitioner",
+        "advanced"
+      ],
+      "sources": [
+        "govuk-needs",
+        "pdi-guidance"
+      ]
+    },
+    {
+      "id": "interface-copy",
+      "domain": "ux-design",
+      "path": "ux-design/interface-copy.md",
+      "depths": [
+        "foundation",
+        "practitioner",
+        "advanced"
+      ],
+      "sources": [
+        "w3c-structure",
+        "wcag22",
+        "pdi-guidance"
+      ]
+    },
+    {
+      "id": "multi-modal-hmi",
+      "domain": "ux-design",
+      "path": "ux-design/multi-modal-hmi.md",
+      "depths": [
+        "foundation",
+        "practitioner",
+        "advanced"
+      ],
+      "sources": [
+        "w3c-structure",
+        "wcag22",
+        "pdi-guidance"
+      ]
+    },
+    {
+      "id": "component-contracts",
+      "domain": "design-systems",
+      "path": "design-systems/component-contracts.md",
+      "depths": [
+        "foundation",
+        "practitioner",
+        "advanced"
+      ],
+      "sources": [
+        "uswds-tokens"
+      ]
+    },
+    {
+      "id": "token-governance",
+      "domain": "design-systems",
+      "path": "design-systems/token-governance.md",
+      "depths": [
+        "foundation",
+        "practitioner",
+        "advanced"
+      ],
+      "sources": [
+        "uswds-tokens",
+        "wcag22",
+        "pdi-guidance"
+      ]
+    },
+    {
+      "id": "ui-kit-adaptation",
+      "domain": "design-systems",
+      "path": "design-systems/ui-kit-adaptation.md",
+      "depths": [
+        "foundation",
+        "practitioner",
+        "advanced"
+      ],
+      "sources": [
+        "uswds-tokens",
+        "wcag22",
+        "pdi-guidance"
+      ]
+    },
+    {
+      "id": "human-reviewed-ai",
+      "domain": "ai-product-building",
+      "path": "ai-product-building/human-reviewed-ai.md",
+      "depths": [
+        "foundation",
+        "practitioner",
+        "advanced"
+      ],
+      "sources": [
+        "nist-ai-rmf"
+      ]
+    },
+    {
+      "id": "responsive-accessible-ui",
+      "domain": "frontend-engineering",
+      "path": "frontend-engineering/responsive-accessible-ui.md",
+      "depths": [
+        "foundation",
+        "practitioner",
+        "advanced"
+      ],
+      "sources": [
+        "wcag22",
+        "w3c-structure"
+      ]
+    }
+  ]
+}
